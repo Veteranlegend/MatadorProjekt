@@ -113,7 +113,9 @@ public class  Spil {
         }
         assert winner != null;
         viewGUI.showMessage(winner.getName() + "has won the game");
-    }private void takeTurn(GUI gui, ViewGUI viewGUI, Spiller spiller, Dice dice1, Dice dice2, FieldList fl, SpillerListe sl, ChanceDeck deck) {
+    }
+
+    private void takeTurn(GUI gui, ViewGUI viewGUI, Spiller spiller, Dice dice1, Dice dice2, FieldList fl, SpillerListe sl, ChanceDeck deck) {
         gui.showMessage("Kast med terninger " + spiller.getName());
         viewGUI.setDice(dice1.roll(), dice2.roll());
         spiller.setExtraTurn(dice1.getFaceValue() == dice2.getFaceValue());
@@ -174,6 +176,7 @@ public class  Spil {
         viewGUI.updateBalance(sl);
         spiller.extraTurns += 1;
     }
+
     private void pantsætning(GUI gui, ViewGUI viewGUI, Spiller spiller, FieldList fl) {
         Object[] ownedFields = getStrings(spiller, fl);
 
@@ -211,6 +214,7 @@ public class  Spil {
             spiller.setHasLost(true);
         }
     }
+
     @NotNull
     private Object[] getStrings(Spiller spiller, FieldList fl) {
         int j = 0;
@@ -236,6 +240,7 @@ public class  Spil {
         }
         return new Object[]{ownedFieldsNames, ownedFields};
     }
+
     private boolean ownedGroupHouses(Color color, Spiller spiller, FieldList fl) {
         boolean hasGroup = true;
 
@@ -249,6 +254,7 @@ public class  Spil {
         }
         return hasGroup;
     }
+
     private boolean ownedGroupHotels(Color color, Spiller spiller, FieldList fl) {
         boolean hasGroup = false;
 
@@ -264,6 +270,7 @@ public class  Spil {
         }
         return hasGroup;
     }
+
     private void OnOwneble(Dice dice1, Dice dice2, FieldList fl, GUI gui, ViewGUI viewGUI, Spiller spiller, SpillerListe sl) {
         viewGUI.moveCar(spiller, dice1.getFaceValue() + dice2.getFaceValue());
         Field currentField = fl.getField(spiller.getPosition());
@@ -304,3 +311,4 @@ public class  Spil {
             }
         }
     }
+}
