@@ -138,3 +138,11 @@ public class ViewGUI {
         return bid;
     }
 // Set field to auction and get the highest bid
+    public int[] auctionField(Owneble field, SpillerListe sl, Spiller spiller){
+        // Return a list of int, where 0 is the bid and 1 is the player number
+        int[] values = new int[2];
+        for (int i = 0; i < sl.getPlayerAmount(); i++) {
+            Spiller player = sl.getPlayerList(i);
+            if(player == spiller || player.isBankRupt() || player.getAccount().getBalance() < field.getPrice()){
+                continue;
+            }
