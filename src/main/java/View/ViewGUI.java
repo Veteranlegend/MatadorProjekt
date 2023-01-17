@@ -129,3 +129,12 @@ public class ViewGUI {
                 s.setHotel(true);
         }
     }
+    public int bidCheck(Spiller player, Owneble field){
+        int bid = gui.getUserInteger(player.getName() + " indtast dit bud på " + field.getName() + " (minimum " + field.getPrice() + ")");
+        if (bid > player.getAccount().getBalance()) {
+            gui.showMessage("Invalid beløb, prøv igen");
+            return bidCheck(player, field);
+        }
+        return bid;
+    }
+// Set field to auction and get the highest bid
