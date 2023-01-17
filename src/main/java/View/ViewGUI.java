@@ -17,3 +17,12 @@ public class ViewGUI {
     private GUI_Player[] gui_players;
     private GUI_Car[] gui_cars;
     private GUI_Field[] gui_fields;
+    public ViewGUI(GUI gui){
+        this.gui = gui;
+        this.gui_fields = gui.getFields();
+    }
+
+    GUI_Car.Type[] carTypes = {CAR, RACECAR, TRACTOR, UFO};
+    GUI_Car.Pattern[] carPatterns = {FILL, HORIZONTAL_GRADIANT, DIAGONAL_DUAL_COLOR,
+            HORIZONTAL_DUAL_COLOR, HORIZONTAL_LINE, CHECKERED, DOTTED, ZEBRA};
+    Color[] colors = {Color.BLUE, Color.ORANGE,Color.RED, Color.GREEN,Color.YELLOW, Color.WHITE };
