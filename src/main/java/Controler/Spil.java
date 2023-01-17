@@ -249,3 +249,18 @@ public class  Spil {
         }
         return hasGroup;
     }
+    private boolean ownedGroupHotels(Color color, Spiller spiller, FieldList fl) {
+        boolean hasGroup = false;
+
+        if (ownedGroupHouses(color, spiller, fl)) {
+            for (int i = 0; i < fl.getFields().length; i++) {
+                if (fl.getField(i) instanceof Street street) {
+                    if (street.getOwner() == spiller && street.getColor() == color && street.getHouseAmount() >= 4) {
+                        hasGroup = true;
+                        break;
+                    }
+                }
+            }
+        }
+        return hasGroup;
+    }
