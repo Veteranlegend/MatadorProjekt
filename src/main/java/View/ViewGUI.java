@@ -100,3 +100,11 @@ public class ViewGUI {
             }
         }
     }
+    public void buyOwneble(Spiller player){
+        GUI_Player gui_player = gui_players[player.getPlayerNumber()];
+        GUI_Field f = gui_fields[player.getPosition()];
+        if(f instanceof GUI_Ownable o){
+            gui_player.setBalance(player.getAccount().getBalance());
+            o.setBorder(gui_player.getPrimaryColor(), gui_player.getSecondaryColor());
+        }
+    }
