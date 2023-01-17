@@ -11,6 +11,7 @@
     <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="tilføjet til spil klassen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="Tilføjet til spil" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,15 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673990098749</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
-    <task id="LOCAL-00011" summary="tilføjet til spil klassen">
-      <created>1673989490516</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
+    <task id="LOCAL-00012" summary="Tilføjet til spil">
+      <created>1673991316704</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1673989490516</updated>
+      <updated>1673991316704</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

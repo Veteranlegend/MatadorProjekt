@@ -44,3 +44,34 @@ public class ViewGUI {
                     carType = item;
                 }
             }
+            String primaryColor = gui.getUserButtonPressed("Vælg din bils primær farve", "BLUE", "ORANGE", "RED", "GREEN", "YELLOW", "WHITE");
+            Color primaryCarColor = colorFromString(primaryColor);
+
+            String secondaryColor = gui.getUserButtonPressed("Vælg din bils sekundær farve", "BLUE", "ORANGE", "RED", "GREEN", "YELLOW", "WHITE");
+            Color secondaryCarColor = colorFromString(secondaryColor);
+
+            GUI_Car.Pattern carPattern = FILL;
+            String pattern = gui.getUserButtonPressed("Vælg din bils farve pattern", "FILL", "HORIZONTAL_GRADIANT", "DIAGONAL_DUAL_COLOR",
+                    "HORIZONTAL_DUAL_COLOR", "HORIZONTAL_LINE", "CHECKERED", "DOTTED", "ZEBRA");
+            for (GUI_Car.Pattern value : carPatterns) {
+                if (value.toString().equals(pattern)) {
+                    carPattern = value;
+                }
+            }
+            gui_cars[i] = new GUI_Car(primaryCarColor, secondaryCarColor, carType, carPattern);
+            gui_players[i] = new GUI_Player(player.getName(), sl.getPlayerList(i).getAccount().getBalance(), gui_cars[i]);
+            gui.addPlayer(gui_players[i]);
+            gui_players[i].getCar().setPosition(gui_fields[0]);
+        }
+    }
+    private Color colorFromString(String color) {
+        switch (color) {
+            case "BLUE" -> {return Color.BLUE;}
+            case "ORANGE" -> {return Color.ORANGE;}
+            case "RED" -> {return Color.RED;}
+            case "GREEN" -> {return Color.GREEN;}
+            case "YELLOW" -> {return Color.YELLOW;}
+            case "WHITE" -> {return Color.WHITE;}
+            default -> {return Color.BLACK;}
+        }
+    }
