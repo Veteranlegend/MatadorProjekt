@@ -12,7 +12,7 @@ import java.awt.*;
 
 import static Model.Account.*;
 
-public class Spil {
+public class  Spil {
     final int JAILFIELD = 10;
 
     public void play() {
@@ -210,4 +210,29 @@ public class Spil {
         if (pantsæt.equals("Nej") && names.length == 0 && spiller.isBankRupt()) {
             spiller.setHasLost(true);
         }
+    }
+    @NotNull
+    private Object[] getStrings(Spiller spiller, FieldList fl) {
+        int j = 0;
+        String[] ownedFieldsNames;
+        Owneble[] ownedFields;
+
+        for (int i = 0; i < fl.getFields().length; i++) {
+            Field f = fl.getField(i);
+            if (f instanceof Street && ((Street) f).getOwner() == spiller) {
+                j++;
+            }
+        }
+        ownedFieldsNames = new String[j];
+        ownedFields = new Owneble[j];
+        int k = 0;
+        for (int i = 0; i < fl.getFields().length; i++) {
+            Field f = fl.getField(i);
+            if (f instanceof Street && ((Street) f).getOwner() == spiller) {
+                ownedFieldsNames[k] = f.getName();
+                ownedFields[k] = (Owneble) f;
+                k++;
+            }
+        }
+        return new Object[]{ownedFieldsNames, ownedFields};
     }
