@@ -108,3 +108,15 @@ public class ViewGUI {
             o.setBorder(gui_player.getPrimaryColor(), gui_player.getSecondaryColor());
         }
     }
+    public void removeOwneble(int index){
+        GUI_Field f = gui_fields[index];
+        if(f instanceof GUI_Ownable o) {
+            o.setBorder(Color.BLACK, Color.BLACK);
+        }
+    }
+
+    public void showChanceCard(String message){
+        gui.displayChanceCard(message);
+        gui.showMessage(message);
+        gui.displayChanceCard("");
+    }
