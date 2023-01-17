@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="Rettet i spil">
-      <change afterPath="$PROJECT_DIR$/src/main/java/View/ViewGUI.java" afterDir="false" />
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="Tilføjet til spil">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="tilføjet til spil klassen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="rettet i spil">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="tilføjet til spil">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_01_2023,_21_59_[Changes]/shelved.patch" afterDir="false" />
-    </list>
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="Tilføjet til spil" />
+    <list default="true" id="9b8b5f32-414c-4217-a550-98771fdc8f27" name="Changes" comment="Rettet sidste fejl inden mvp" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,147 +23,82 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2KT6TSIHFso2YZ5rDkxkDWT8Hsh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2K98akhmIn4TGFqB8Tvb0zUfX46" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
-  }
-}</component>
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+    }
+    }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MatadorGruppe9" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="" />
-      <created>1673986236182</created>
+      <changelist id="9b8b5f32-414c-4217-a550-98771fdc8f27" name="Changes" comment="" />
+      <created>1673375503882</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1673986236182</updated>
-      <workItem from="1673986238836" duration="352000" />
-      <workItem from="1673987557824" duration="306000" />
-      <workItem from="1673988045871" duration="332000" />
-      <workItem from="1673988579052" duration="368000" />
+      <updated>1673375503882</updated>
+      <workItem from="1673375505219" duration="2504000" />
+      <workItem from="1673378313525" duration="160000" />
+      <workItem from="1673435230788" duration="353000" />
+      <workItem from="1673859213500" duration="61000" />
+      <workItem from="1673989185194" duration="1160000" />
     </task>
-    <task id="LOCAL-00001" summary="kommntar hej">
-      <created>1673986299750</created>
+    <task id="LOCAL-00001" summary="rettet enkelte fejl, comittet spillerliste, spiller samt smit gui ind i xml">
+      <created>1673377482134</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1673986299750</updated>
+      <updated>1673377482134</updated>
     </task>
-    <task id="LOCAL-00002" summary="Ændret filstruktur">
-      <created>1673986546146</created>
+    <task id="LOCAL-00002" summary="Parking">
+      <created>1673377696802</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1673986546146</updated>
+      <updated>1673377696802</updated>
     </task>
-    <task id="LOCAL-00003" summary="Ændret filstruktur samt tilføjet brewery">
-      <created>1673987636230</created>
+    <task id="LOCAL-00003" summary="fikset ownable">
+      <created>1673377818944</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1673987636230</updated>
+      <updated>1673377818944</updated>
     </task>
-    <task id="LOCAL-00004" summary="Lavet abstrakt klasse til field med gennemgående attributer">
-      <created>1673987848250</created>
+    <task id="LOCAL-00004" summary="Rettet sidste fejl inden mvp">
+      <created>1673378176056</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1673987848250</updated>
+      <updated>1673378176056</updated>
     </task>
-    <task id="LOCAL-00005" summary="Oprettet spillerliste">
-      <created>1673988095380</created>
+    <task id="LOCAL-00005" summary="Rettet sidste fejl inden mvp">
+      <created>1673989321945</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1673988095381</updated>
+      <updated>1673989321945</updated>
     </task>
-    <task id="LOCAL-00006" summary="ændret filstruktur plus oprettet chancecard abstrakt">
-      <created>1673988182974</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1673988182974</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Oprettet flere felter">
-      <created>1673988263310</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1673988263310</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Har oprettet receive money og withdraw samt deres metoder">
-      <created>1673988347448</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1673988347448</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Har oprettet go to jail, løsladelsedskort og movetoferry">
-      <created>1673988693791</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1673988693791</updated>
-    </task>
-    <task id="LOCAL-00010" summary="movefield amouunt rettet">
-      <created>1673988843227</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1673988843228</updated>
-    </task>
-    <task id="LOCAL-00011" summary="rettet i spil">
-      <created>1673989936118</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1673989936118</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
-    <task id="LOCAL-00011" summary="Rettet i spil">
-      <created>1673990970709</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1673990970709</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
-    <task id="LOCAL-00011" summary="Tilføjet til spil">
-      <created>1673990098749</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1673990098749</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Tilføjet til spil">
-      <created>1673991316704</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1673991316704</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
-    <task id="LOCAL-00011" summary="tilføjet til spil">
-      <created>1673991162357</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1673991162357</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
