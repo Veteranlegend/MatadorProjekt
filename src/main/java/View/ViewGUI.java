@@ -75,3 +75,8 @@ public class ViewGUI {
             default -> {return Color.BLACK;}
         }
     }
+    public void updateBalance(SpillerListe sl){
+        for (int i = 0; i < gui_players.length; i++) {
+            gui_players[i].setBalance(sl.getPlayerList(i).getAccount().getBalance());
+        }
+    }
