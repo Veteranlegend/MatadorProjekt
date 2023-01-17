@@ -152,3 +152,15 @@ public class ViewGUI {
                 values[1] = i;
             }
         }
+        if(values[0] < field.getPrice()){
+            gui.showMessage("Ingen valid bud på " + field.getName() + " derfor bliver feltet solgt til banken");
+            values[1] = -1;
+        }
+        return values;
+    }
+
+    public void showMessage(String message) {
+        gui.showMessage(message);
+    }
+
+}
