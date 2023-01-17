@@ -285,3 +285,22 @@ public class  Spil {
                     viewGUI.buyHouseHotel((Street) currentField, spiller.getPosition());
                 }
             }
+        } else if (currentField instanceof Owneble && ((Owneble) currentField).getOwner() != null) {
+            if (currentField instanceof Ferry) {
+                int count = 0;
+
+                for (int i = 0; i < fl.getFields().length; i++) {
+                    Field fr = fl.getField(i);
+                    if (fr instanceof Ferry && ((Ferry) fr).getOwner() == ((Ferry) currentField).getOwner()) {
+                        count++;
+                    }
+                }
+
+                ((Ferry) currentField).setHouseAmount(count);
+                pay(spiller.getAccount(), ((Ferry) currentField).getOwner().getAccount(), ((Ferry) currentField).getRent(), spiller);
+
+            } else {
+                pay(spiller.getAccount(), ((Owneble) currentField).getOwner().getAccount(), ((Owneble) currentField).getRent(), spiller);
+            }
+        }
+    }
