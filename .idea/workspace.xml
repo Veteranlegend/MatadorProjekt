@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="movefield amouunt rettet">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_01_2023__22_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_01_2023__22_03__Changes_.xml" afterDir="false" />
+    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="Tilføjet til spil">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673988843228</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Tilføjet til spil">
+      <created>1673990098749</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673990098749</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +162,7 @@
     <MESSAGE value="Har oprettet receive money og withdraw samt deres metoder" />
     <MESSAGE value="Har oprettet go to jail, løsladelsedskort og movetoferry" />
     <MESSAGE value="movefield amouunt rettet" />
-    <option name="LAST_COMMIT_MESSAGE" value="movefield amouunt rettet" />
+    <MESSAGE value="Tilføjet til spil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet til spil" />
   </component>
 </project>

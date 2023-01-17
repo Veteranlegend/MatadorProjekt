@@ -264,3 +264,24 @@ public class  Spil {
         }
         return hasGroup;
     }
+    private void OnOwneble(Dice dice1, Dice dice2, FieldList fl, GUI gui, ViewGUI viewGUI, Spiller spiller, SpillerListe sl) {
+        viewGUI.moveCar(spiller, dice1.getFaceValue() + dice2.getFaceValue());
+        Field currentField = fl.getField(spiller.getPosition());
+        if (currentField instanceof Owneble && ((Owneble) currentField).getOwner() == null && spiller.getAccount().getBalance() > ((Owneble) currentField).getPrice()) {
+            String buy = gui.getUserButtonPressed("Vil du købe " + currentField.getName() + " for " + ((Owneble) currentField).getPrice(), "Ja", "Nej");
+            if (buy.equals("Ja")) {
+                withdraw(spiller.getAccount(), ((Owneble) currentField).getPrice(), spiller);
+                ((Owneble) currentField).setOwner(spiller);
+                viewGUI.buyOwneble(spiller);
+            } else if (buy.equals("Nej")) {
+                gui.showMessage("Du har valgt at afvise at købe " + currentField.getName() + " feltet stilles derfor på auktion");
+                int[] winner = viewGUI.auctionField((Owneble) currentField, sl, spiller);
+                int auctionwinner = winner[1];
+                int auctionprice = winner[0];
+                if (winner[1] != -1) {
+                    withdraw(sl.getPlayerList(auctionwinner).getAccount(), auctionprice, spiller);
+                    ((Owneble) currentField).setOwner(sl.getPlayerList(auctionwinner));
+                    viewGUI.buyOwneble(sl.getPlayerList(auctionwinner));
+                    viewGUI.buyHouseHotel((Street) currentField, spiller.getPosition());
+                }
+            }
