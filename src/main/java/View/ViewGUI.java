@@ -146,3 +146,9 @@ public class ViewGUI {
             if(player == spiller || player.isBankRupt() || player.getAccount().getBalance() < field.getPrice()){
                 continue;
             }
+            int bid = bidCheck(player, field);
+            if(bid > values[0]){
+                values[0] = bid;
+                values[1] = i;
+            }
+        }
