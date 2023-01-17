@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="Har oprettet receive money og withdraw samt deres metoder">
-      <change afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+    <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="movefield amouunt rettet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Parking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Street.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Tax.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,7 @@
       <workItem from="1673986238836" duration="352000" />
       <workItem from="1673987557824" duration="306000" />
       <workItem from="1673988045871" duration="332000" />
+      <workItem from="1673988579052" duration="368000" />
     </task>
     <task id="LOCAL-00001" summary="kommntar hej">
       <created>1673986299750</created>
@@ -112,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673988347448</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Har oprettet go to jail, løsladelsedskort og movetoferry">
+      <created>1673988693791</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673988693791</updated>
+    </task>
+    <task id="LOCAL-00010" summary="movefield amouunt rettet">
+      <created>1673988843227</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673988843228</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +156,8 @@
     <MESSAGE value="ændret filstruktur plus oprettet chancecard abstrakt" />
     <MESSAGE value="Oprettet flere felter" />
     <MESSAGE value="Har oprettet receive money og withdraw samt deres metoder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Har oprettet receive money og withdraw samt deres metoder" />
+    <MESSAGE value="Har oprettet go to jail, løsladelsedskort og movetoferry" />
+    <MESSAGE value="movefield amouunt rettet" />
+    <option name="LAST_COMMIT_MESSAGE" value="movefield amouunt rettet" />
   </component>
 </project>
