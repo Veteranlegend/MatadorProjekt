@@ -60,3 +60,57 @@ public class Spil {
                 }
                 continue;
             }
+            spiller.setPassingMoney(true);
+
+            if (spiller.isJail()) {
+                spiller.setJailTurns(spiller.getJailTurns() + 1);
+
+                String jailString = gui.getUserButtonPressed("Vælg den måde du vil komme ud af fængslet på", "Betal en bøde på 1000", "Benyt et løsladelseskort", "Forsøg at kaste 2 ens terninger");
+
+                if (jailString.equals("Betal en bøde på 1000")) {
+                    if (spiller.getAccount().getBalance() > 1000) {
+                        withdraw(spiller.getAccount(), 1000, spiller);
+                        viewGUI.updateBalance(sl);
+                        spiller.setJail(false);
+                    }
+                }
+
+                if (jailString.equals("Forsøg at kaste 2 ens terninger")) {
+                    viewGUI.setDice(dice1.roll(), dice2.roll());
+                    if (dice1.getFaceValue() == dice2.getFaceValue()) {
+                        spiller.setJail(false);
+                        OnOwneble(dice1, dice2, fl, gui, viewGUI, spiller, sl);
+                    }
+                }
+
+                if (jailString.equals("Benyt løsladelseskort") && spiller.isSetOutofJailCard()) {
+                    spiller.setSetOutofJailCard(false);
+                    spiller.setJail(false);
+                }
+
+                if (spiller.getJailTurns() >= 3) {
+                    spiller.setJail(false);
+                }
+            } else {
+                spiller.extraTurns = 0;
+
+                takeTurn(gui, viewGUI, spiller, dice1, dice2, fl, sl, deck);
+
+                while (spiller.getExtraTurn()) {
+                    if (spiller.extraTurns < 2) {
+                        takeTurn(gui, viewGUI, spiller, dice1, dice2, fl, sl, deck);
+                    } else {
+                        gui.showMessage("Du går til fængslet");
+                        spiller.setPassingMoney(false);
+                        spiller.setJail(true);
+                        viewGUI.moveCarToField(spiller, JAILFIELD);
+                        break;
+                    }
+                }
+                winner = spiller;
+            }
+            sl.getNextPlayer();
+        }
+        assert winner != null;
+        viewGUI.showMessage(winner.getName() + "has won the game");
+    }
