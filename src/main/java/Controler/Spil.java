@@ -113,4 +113,64 @@ public class Spil {
         }
         assert winner != null;
         viewGUI.showMessage(winner.getName() + "has won the game");
+    }private void takeTurn(GUI gui, ViewGUI viewGUI, Spiller spiller, Dice dice1, Dice dice2, FieldList fl, SpillerListe sl, ChanceDeck deck) {
+        gui.showMessage("Kast med terninger " + spiller.getName());
+        viewGUI.setDice(dice1.roll(), dice2.roll());
+        spiller.setExtraTurn(dice1.getFaceValue() == dice2.getFaceValue());
+        OnOwneble(dice1, dice2, fl, gui, viewGUI, spiller, sl);
+        Field currentField = fl.getField(spiller.getPosition());
+
+        pantsætning(gui, viewGUI, spiller, fl);
+
+        if (currentField instanceof Tax) {
+            withdraw(spiller.getAccount(), ((Tax) currentField).getTax(), spiller);
+            viewGUI.updateBalance(sl);
+        }
+
+        if (currentField instanceof Chance) {
+            String drawCard = gui.getUserButtonPressed("Træk et hvilket som helst kort", "Træk kort");
+            ChanceCard chanceCard = deck.drawCard();
+            chanceCard.doCard(spiller, viewGUI);
+            viewGUI.showChanceCard(chanceCard.getDescription());
+        }
+
+        if (spiller.getPosition() == 30) {
+            gui.showMessage("Du går til fængslet");
+            spiller.setPassingMoney(false);
+            spiller.setJail(true);
+            viewGUI.moveCarToField(spiller, JAILFIELD);
+        }
+
+        if (spiller.isPassingMoney() && spiller.previousPosition > spiller.getPosition()) {
+            deposit(spiller.getAccount(), 4000);
+        }
+
+        // For houses, will appear if you have all the fields in a color
+        if (currentField instanceof Street) {
+            if (ownedGroupHouses(((Street) currentField).getColor(), spiller, fl)) {
+                String buyHouse = gui.getUserButtonPressed("Vil du købe et hus til " + currentField.getName(), "Ja", "Nej");
+                if (buyHouse.equals("Ja")) {
+                    if (spiller.getAccount().getBalance() > ((Street) currentField).getHousePrice()) {
+                        withdraw(spiller.getAccount(), ((Street) currentField).getHousePrice(), spiller);
+                        ((Street) currentField).setHouseAmount(((Street) currentField).getHouseAmount() + 1);
+                        viewGUI.updateBalance(sl);
+                        viewGUI.buyHouseHotel((Street) currentField, spiller.getPosition());
+                    }
+                }
+            }
+
+            // if you have all houses, then this option will appear
+            if (ownedGroupHotels(((Street) currentField).getColor(), spiller, fl)) {
+                String buyHotel = gui.getUserButtonPressed("Vil du købe et hotel til " + currentField.getName(), "Ja", "Nej");
+                if (buyHotel.equals("Ja")) {
+                    if (spiller.getAccount().getBalance() > ((Street) currentField).getHousePrice()) {
+                        withdraw(spiller.getAccount(), ((Street) currentField).getHousePrice(), spiller);
+                        viewGUI.updateBalance(sl);
+                        viewGUI.buyHouseHotel((Street) currentField, spiller.getPosition());
+                    }
+                }
+            }
+        }
+        viewGUI.updateBalance(sl);
+        spiller.extraTurns += 1;
     }

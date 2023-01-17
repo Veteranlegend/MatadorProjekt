@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df362272-0b42-494d-b016-185a11e3be30" name="Changes" comment="movefield amouunt rettet">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Parking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Street.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fields/Tax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_01_2023__22_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_01_2023__22_03__Changes_.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
