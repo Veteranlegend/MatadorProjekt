@@ -236,3 +236,16 @@ public class  Spil {
         }
         return new Object[]{ownedFieldsNames, ownedFields};
     }
+    private boolean ownedGroupHouses(Color color, Spiller spiller, FieldList fl) {
+        boolean hasGroup = true;
+
+        for (int i = 0; i < fl.getFields().length; i++) {
+            if (fl.getField(i) instanceof Street street) {
+                if (street.getOwner() != spiller && street.getColor() == color) {
+                    hasGroup = false;
+                    break;
+                }
+            }
+        }
+        return hasGroup;
+    }
