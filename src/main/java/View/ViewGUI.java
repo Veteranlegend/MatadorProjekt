@@ -120,3 +120,12 @@ public class ViewGUI {
         gui.showMessage(message);
         gui.displayChanceCard("");
     }
+    public void buyHouseHotel(Street field, int index){
+        GUI_Field f = gui.getFields()[index];
+        if(f instanceof GUI_Street s){
+            if(field.getHouseAmount() <= 4){
+                s.setHouses(field.getHouseAmount());
+            } else
+                s.setHotel(true);
+        }
+    }
