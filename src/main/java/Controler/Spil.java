@@ -174,3 +174,40 @@ public class Spil {
         viewGUI.updateBalance(sl);
         spiller.extraTurns += 1;
     }
+    private void pantsætning(GUI gui, ViewGUI viewGUI, Spiller spiller, FieldList fl) {
+        Object[] ownedFields = getStrings(spiller, fl);
+
+        String[] names = (String[]) ownedFields[0];
+
+        String pantsæt = gui.getUserButtonPressed("Vil du pantsætte nogle af dine grunde", "Nej", "Ja");
+        if (pantsæt.equals("Ja") && names.length != 0) {
+            String grund = gui.getUserSelection("Hvilken grund vil du sælge", names);
+            Owneble fieldToSell = null;
+            int index = 0;
+
+            for (int i = 0; i < fl.getFields().length; i++) {
+                if (fl.getField(i).getName().equals(grund)) {
+                    fieldToSell = (Owneble) fl.getField(i);
+                    index = i;
+                }
+            }
+
+            int amount = 0;
+            if (fieldToSell instanceof Street) {
+                amount += fieldToSell.getHouseAmount() * ((Street) fieldToSell).getHousePrice();
+            }
+            assert fieldToSell != null;
+            amount += fieldToSell.getPrice();
+
+            deposit(spiller.getAccount(), amount);
+            fieldToSell.setOwner(null);
+            viewGUI.removeOwneble(index);
+
+            assert fieldToSell instanceof Street;
+            viewGUI.buyHouseHotel((Street) fieldToSell, index);
+        }
+
+        if (pantsæt.equals("Nej") && names.length == 0 && spiller.isBankRupt()) {
+            spiller.setHasLost(true);
+        }
+    }
